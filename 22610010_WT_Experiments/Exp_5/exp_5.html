@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling with JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1c598a;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>JavaScript Event Handling Example</h1>
+
+        <h2>Button Click Event</h2>
+        <button id="clickButton">Click Me!</button>
+        <div id="message"></div>
+
+        <h2>Mouse Over Event</h2>
+        <div id="hoverBox" style="width: 200px; height: 100px; background-color: #ecf0f1; text-align: center; line-height: 100px; border: 1px solid #bdc3c7; border-radius: 5px;">
+            Hover over me!
+        </div>
+
+        <h2>Form Submission Event</h2>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="formMessage" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        // Button Click Event
+        const clickButton = document.getElementById('clickButton');
+        const messageDiv = document.getElementById('message');
+
+        clickButton.addEventListener('click', function() {
+            messageDiv.textContent = 'Button clicked! Thank you!';
+        });
+
+        // Mouse Over Event
+        const hoverBox = document.getElementById('hoverBox');
+
+        hoverBox.addEventListener('mouseover', function() {
+            hoverBox.style.backgroundColor = '#3498db';
+            hoverBox.style.color = '#fff';
+            hoverBox.textContent = 'You are hovering!';
+        });
+
+        hoverBox.addEventListener('mouseout', function() {
+            hoverBox.style.backgroundColor = '#ecf0f1';
+            hoverBox.style.color = '#333';
+            hoverBox.textContent = 'Hover over me!';
+        });
+
+        // Form Submission Event
+        const myForm = document.getElementById('myForm');
+        const formMessageDiv = document.getElementById('formMessage');
+
+        myForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            const name = document.getElementById('name').value;
+            formMessageDiv.textContent = `Form submitted! Hello, ${name}!`;
+            myForm.reset(); // Reset the form fields
+        });
+    </script>
+
+</body>
+</html>

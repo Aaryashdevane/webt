@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced CSS Properties Example</title>
+
+    <!-- Embedded CSS -->
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Styling Headings */
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Styling */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        p:hover {
+            color: #2980b9; /* Change color on hover */
+        }
+
+        /* Links Styling */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1abc9c; /* Change color on hover */
+        }
+
+        /* Div Container with Background and Padding */
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+        }
+
+        /* Adding Padding and Margin to Lists */
+        ul {
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-left: 5px solid #2980b9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease; /* Smooth background transition */
+        }
+
+        ul li:hover {
+            background-color: #dfe6e9; /* Change background color on hover */
+        }
+
+        /* Styling the Button */
+        .btn {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition effects */
+        }
+
+        .btn:hover {
+            background-color: #1c598a;
+            transform: scale(1.05); /* Slightly enlarge the button on hover */
+        }
+
+        /* Styling an Image */
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease; /* Add transition effect */
+        }
+
+        .image:hover {
+            transform: scale(1.05); /* Slightly enlarge the image on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My Enhanced Web Page</h1>
+
+        <p>This page demonstrates the use of <strong>CSS properties</strong> to style various HTML elements with enhanced effects, such as transitions and shadows.</p>
+
+        <h2>CSS Properties Demonstrated:</h2>
+
+        <ul>
+            <li><strong>Text Styling</strong>: Changing font size, color, and line height.</li>
+            <li><strong>Background Colors</strong>: For the body, div, and list elements.</li>
+            <li><strong>Borders</strong>: Adding borders and border-radius for rounded corners.</li>
+            <li><strong>Box Shadow</strong>: Creating shadow effects around elements.</li>
+            <li><strong>Hover Effects</strong>: On links, buttons, and list items for interaction feedback.</li>
+            <li><strong>Image Effects</strong>: Enlarging and adding shadow to images on hover.</li>
+        </ul>
+
+        <p>Here’s an example image styled with CSS:</p>
+        <img src="image.png" alt="Sample Image" class="image">
+
+        <p>If you want to learn more about web development, <a href="https://developer.mozilla.org/">click here</a> to visit MDN Web Docs.</p>
+
+        <button class="btn">Click Me!</button>
+    </div>
+
+</body>
+</html>
